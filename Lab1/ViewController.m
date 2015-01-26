@@ -24,6 +24,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -32,6 +33,12 @@
     self.userNameInputField.hidden = true;
     [sender setHidden:YES];
 }
+
+- (IBAction)backgroundTouch:(id)sender {
+    [self.userNameInputField resignFirstResponder];
+}
+
+
 - (IBAction)fullComedyClick:(id)sender {
     NSString* userName = self.userNameInputField.text;
     if(![userName  isEqual: @""]){
